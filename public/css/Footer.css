@@ -1,0 +1,49 @@
+.site-footer {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-left,
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-left a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  .footer-left a:hover {
+    color: orange;
+  }
+  
+  .footer-right {
+    align-items: flex-end;
+    text-align: right;
+  }
+  
+  .contact span {
+    color: #25D366; /* WhatsApp zaļš */
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .contact p {
+    color: #ccc;
+    margin: 5px 0;
+  }
+  
+  .social a {
+    color: orange;
+    font-size: 22px;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  

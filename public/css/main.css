@@ -1,0 +1,86 @@
+.grid-container{
+margin-top: 100px;
+display: grid;
+justify-items: center;
+grid-template-columns: 1fr 1fr 1fr;
+padding-left: 150px;
+padding-right: 150px;
+grid-gap: 5px ;
+}
+@media (max-width:1920px) {  
+.grid-container{
+ padding-left: 20px;
+    padding-right: 20px;
+}
+  }
+.item1{
+grid-column: 1/4;
+}
+.grid-container{
+    border: 2px solid red;
+}
+
+.item2{
+   width: 500px;
+    height: auto;
+    border-radius: 20px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+     
+}
+.item2 img{
+    width: 500px;
+    height: 300px;
+    display:flex ;
+   border-radius: 15px 15px 0 0;
+
+}
+.item2 p {
+padding-left: 10px; 
+}
+
+.item2:hover{
+
+   transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+.Apraksts{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.fons {
+    
+  background-image: url('https://media.istockphoto.com/id/1392114708/photo/working-with-my-little-asistent-by-my-side.jpg?s=2048x2048&w=is&k=20&c=bJfVug0cT_6WwkzGA4cUaA9m0ijLfyssIyP2FqbYan8=');
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+  height: 50vh;                
+  width: auto; 
+    display: flex;               /* <-- svarīgi */
+  justify-content: center;     /* horizontāli */
+  align-items: center;         /* vertikāli */
+  padding: 20px;               /* neliels attālums no malas */
+  text-align: center;
+  font-size: 24px;
+  color: palevioletred;
+  font-style: italic;              
+}
+.teksts{
+    background-image: 
+    url('/images/pawprints.png'),
+    linear-gradient(to top, rgb(148, 142, 142), rgb(255, 255, 255));
+  background-repeat: no-repeat, repeat;
+  background-size: 20% auto;
+  background-position:  center, center;
+  height: 100%;
+  text-align: center;
+ padding-left: 50px;
+ padding-right: 20px;
+ font-size: 17px;
+ z-index: 1;
+
+}
