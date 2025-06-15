@@ -1,0 +1,2 @@
+# Kinolog
+Kinologa mājaslapas izveide
