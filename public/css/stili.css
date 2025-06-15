@@ -68,3 +68,43 @@ li:hover{
    
   }
   
+
+
+  .table-responsive {
+    margin-top: 20px;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+
+/*edit profils*/
+/* Profila rediģēšanas forma */
+.profile-edit-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-edit-form h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.profile-edit-form hr {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #34495e;
+}
+
+/* Pielāgojumi maziem ekrāniem */
+@media (max-width: 768px) {
+    .profile-edit-form {
+        padding: 0 15px;
+    }
+}

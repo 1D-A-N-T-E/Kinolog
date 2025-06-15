@@ -11,8 +11,11 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
-    })
+    // Šeit pievienojiet savu middleware
+    $middleware->alias([
+        'admin' => \App\Http\Middleware\CheckAdminRole::class,
+    ]);
+})
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
