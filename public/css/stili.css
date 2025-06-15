@@ -108,3 +108,168 @@ li:hover{
         padding: 0 15px;
     }
 }
+
+
+/*Par sekcija*/
+
+/* Pamata stili */
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #ff9a3c;
+    --text-color: #333;
+    --light-bg: #f9f9f9;
+    --dark-bg: #2c3e50;
+    --white: #fff;
+}
+
+
+
+.Aboutcontainer {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header stili */
+header {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    font-style: italic;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+/* Satura stili */
+.Aboutcontainer h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+.Aboutcontainer h3 {
+    color: var(--dark-bg);
+    margin-top: 1.5rem;
+}
+
+.Aboutcontainer .intro {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.Aboutcontainer ul {
+    padding-left: 1.5rem;
+}
+
+.Aboutcontainer li {
+    margin-bottom: 0.5rem;
+}
+
+blockquote {
+    background-color: var(--white);
+    border-left: 4px solid var(--secondary-color);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+}
+
+.mission {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+
+/* Responsīvie stili */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+
+/*Kontakti informācija*/
+
+/* Kontaktu lapas specifiskie stili */
+.contact-page {
+    padding: 2rem 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    font-size: 2rem;
+    color: #4a6fa5;
+    margin-bottom: 1rem;
+}
+
+.contact-card h3 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.contact-card a {
+    color: #4a6fa5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-card a:hover {
+    color: #e67e22;
+    text-decoration: underline;
+}
+
+.social-card .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+

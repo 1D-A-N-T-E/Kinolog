@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\Help;
 use App\Http\Controllers\mainController;
 use App\Http\Controllers\contactsController;
 use App\Http\Controllers\aboutController;
@@ -14,26 +13,14 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\HomeController;
-/*
-Route::get('/', function () {
-    return 'aaaaaaaa';
-});
-*/
-/*
-Route::get('/Posts', [PostController::class, 'index'])->name('post.index');
-Route::get('/Posts/create', [PostController::class, 'create']);
-Route::get('/Posts/update', [PostController::class, 'update']);
-Route::get('/Posts/delete', [PostController::class, 'delete']);
-Route::get('/Posts/fisrt_or_crate', [PostController::class, 'firstOrCreatePost']);
-Route::get('/Posts/update_or_crate', [PostController::class, 'updateOrCreatePost']);
-Route::get('help', [Help::class,'index']);
-*/
-//Route::get('/Login', [LoginController::class, 'index'])->name('Login.index');
-//Route::get('/Register', [RegisterController::class, 'index'])->name('Register.index');
-//Route::get('/', [LoginController::class, 'HomeController@index']);
 
 Route::get('/', [mainController::class, 'index'])->name('main.index');
-Route::get('/contacts', [contactsController::class, 'index'])->name('contacts.index');
+
+// Kontaktu lapas maršruts
+Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts.index');
+
+// E-pasta sūtīšanas maršruts
+Route::post('/contacts/send', [ContactsController::class, 'send'])->name('contacts.send');
 Route::get('/about', [aboutController::class, 'index'])->name('about.index');
 
 
@@ -45,9 +32,7 @@ Route::middleware('guest')->group(function () {
 });
 
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register']);
 Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');

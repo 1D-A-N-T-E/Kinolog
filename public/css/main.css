@@ -16,9 +16,7 @@ grid-gap: 5px ;
 .item1{
 grid-column: 1/4;
 }
-.grid-container{
-    border: 2px solid red;
-}
+
 
 .item2{
    width: 500px;
@@ -54,16 +52,16 @@ padding-left: 10px;
 
 .fons {
     
-  background-image: url('https://media.istockphoto.com/id/1392114708/photo/working-with-my-little-asistent-by-my-side.jpg?s=2048x2048&w=is&k=20&c=bJfVug0cT_6WwkzGA4cUaA9m0ijLfyssIyP2FqbYan8=');
+  background-image: url('https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-size: cover;       
   background-position: center;  
   background-repeat: no-repeat; 
   height: 50vh;                
   width: auto; 
-    display: flex;               /* <-- svarīgi */
-  justify-content: center;     /* horizontāli */
-  align-items: center;         /* vertikāli */
-  padding: 20px;               /* neliels attālums no malas */
+    display: flex;               
+  justify-content: center;     
+  align-items: center;         
+  padding: 20px;               
   text-align: center;
   font-size: 24px;
   color: palevioletred;
@@ -75,7 +73,7 @@ padding-left: 10px;
     linear-gradient(to top, rgb(148, 142, 142), rgb(255, 255, 255));
   background-repeat: no-repeat, repeat;
   background-size: 20% auto;
-  background-position:  center, center;
+  background-position:  start, center;
   height: 100%;
   text-align: center;
  padding-left: 50px;
@@ -145,7 +143,13 @@ padding-left: 10px;
   
 }
 
-.nav-right{
+.Lietotajanav{
+    margin-top: 35px;
+    margin-right: 35px;
+    padding-top: 10px;
+    border-radius: 15px;
+    background-color: rgba(38, 193, 217, 0.749);
 top: 50%;
 transform: translateY(-20%);
+z-index: 3;
 }

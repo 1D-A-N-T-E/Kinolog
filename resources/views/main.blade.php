@@ -29,14 +29,14 @@
     </div>
     <div class="grid-item item2">
         <img src="{{ asset('https://media.istockphoto.com/id/1448400427/photo/smiling-businesswoman-driving-car.jpg?s=2048x2048&w=is&k=20&c=azdp3Dc_XtEoxl1ga6UlRzJ-JMs7GB1-_MbPdL_iI7Q=') }}" alt="logo">
-        <p>Izbaukuma konsultācijas - mājas vizītes
+        <p>Izbraukuma konsultācijas - mājas vizītes
           Nepieciešamības gadījumā, iespējama situāciju risināšana konkrētajā suņa uzturēšanās vidē. 🚗 </p>
          </div>
     <div class="grid-item item2"> 
         <img src="{{ asset('https://images.pexels.com/photos/8824105/pexels-photo-8824105.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') }}" alt="logo">
-        <p>Kucēnu un pieaugušu suņu apmācība, iepriekš izvēlētā vieta priekš tikšanās.</p>
+        <p>Kucēnu un pieaugušu suņu apmācība, iepriekš izvēlētā tikšanās vieta.</p>
     </div>
 </div>
 
-       <p>Šī ir Main</p>
+      
     @endsection

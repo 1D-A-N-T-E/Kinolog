@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/admin.edit.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/Kontakti.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -28,8 +29,7 @@
                 <ul>
                 
                     <li> <a href="{{route('main.index')}}">KINOLOGS 🐾</a></li>
-                    <li> <a href="#">POSTS</a></li>
-                    <li><a href="{{route('about.index')}}">PAR</a></li>
+                    <li><a href="{{route('about.index')}}">PAR MANI</a></li>
                     <li><a href="{{route('contacts.index')}}">KONTAKTI ☎️</a></li>
                     @auth
     @if (Auth::user()->is_admin)
@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <div class="nav-right">
+    <div class="Lietotajanav">
     <ul>
         @auth
             <!-- Lietotāja izvēlne (redzama tikai ielogotiem lietotājiem) -->
@@ -157,8 +157,7 @@
 <!-- Bootstrap JS (ja izmantojat) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Font Awesome ikonas (ja izmantojat) -->
-<script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+
 
 <!-- Jūsu pielāgotais JS -->
  <script>
