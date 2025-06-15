@@ -8,8 +8,8 @@
     </header>
 
     <nav class="container">
-        <a href="kinologe.html">Par mani</a>
-        <a href="kontakti.html" class="active">Kontakti</a>
+        <a href="{{route('about.index')}}">Par mani</a>
+        <a href="{{route('contacts.index')}}" class="active">Kontakti</a>
     </nav>
 
     <main class="container contact-page">

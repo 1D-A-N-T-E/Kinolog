@@ -26,7 +26,7 @@ Route::get('/about', [aboutController::class, 'index'])->name('about.index');
 
 
 Route::middleware('guest')->group(function () {
-    // Ja izmantojat RegistrationController
+    
     Route::get('/register', [RegistrationController::class, 'showRegistrationForm'])->name('register');
     Route::post('/register', [RegistrationController::class, 'register']);
 });
@@ -55,7 +55,7 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
         Route::get('/', [AdminController::class, 'index'])->name('index');
         Route::get('/create', [AdminController::class, 'create'])->name('create');
         Route::post('/', [AdminController::class, 'store'])->name('store');
-        Route::get('/{user}/edit', [AdminController::class, 'edit'])->name('edit'); // Šis bija trūkstošais maršruts
+        Route::get('/{user}/edit', [AdminController::class, 'edit'])->name('edit'); 
         Route::put('/{user}', [AdminController::class, 'update'])->name('update');
         Route::delete('/{user}', [AdminController::class, 'destroy'])->name('destroy');
     });
@@ -71,7 +71,6 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/profile/{user}', [ProfileController::class, 'update'])->name('profile.update');
     
     // Mājdzīvnieka dzēšana
-   // Route::delete('/pets/{user}', [ProfileController::class, 'destroyPet'])->name('pets.destroy');
    Route::post('/profile/{user}/pets', [ProfileController::class, 'addPet'])->name('pets.store');
     Route::get('/pets/{pet}/edit', [ProfileController::class, 'editPet'])->name('pets.edit');
     Route::put('/pets/{pet}', [ProfileController::class, 'updatePet'])->name('pets.update');

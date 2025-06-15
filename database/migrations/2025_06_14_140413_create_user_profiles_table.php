@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_profiles', function (Blueprint $table) {
+        /*Schema::create('user_profiles', function (Blueprint $table) {
     $table->id();
     $table->foreignId('user_id')->constrained()->onDelete('cascade');
     
@@ -32,7 +32,7 @@ return new class extends Migration
     $table->date('birthdate')->nullable();
     
     $table->timestamps();
-
+*/
     Schema::create('pets', function (Blueprint $table) {
     $table->id();
     $table->foreignId('user_id')->constrained()->onDelete('cascade');
@@ -50,7 +50,7 @@ Schema::create('user_comments', function (Blueprint $table) {
     $table->text('comment');
     $table->timestamps();
 });
-});
+//});
     }
 
     /**

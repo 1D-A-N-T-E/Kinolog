@@ -71,64 +71,7 @@
     </div>
     
     @yield('content')
-<!-- Komentāru sadaļa -->
-<div class="comments-section mt-5">
-    <h3>Lietotāju komentāri</h3>
-    
-    @auth
-    <div class="card mb-4">
-        <div class="card-body">
-            <form action="{{ route('comments.store') }}" method="POST">
-                @csrf
-                <div class="form-group">
-                    <textarea name="comment" class="form-control" rows="3" 
-                              placeholder="Jūsu komentārs..." required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary mt-2">Publicēt</button>
-            </form>
-        </div>
-    </div>
-    @else
-    <div class="alert alert-info">
-        Lai pievienotu komentāru, lūdzu, <a href="{{ route('login') }}">pierakstieties</a>.
-    </div>
-    @endauth
 
-    @isset($comments)
-    <div class="comments-list">
-        @forelse($comments as $comment)
-            <div class="card mb-3">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">{{ $comment->user->username }}</h5>
-                        <small class="text-muted">{{ $comment->created_at->diffForHumans() }}</small>
-                    </div>
-                    <p class="mt-2 mb-3">{{ $comment->comment }}</p>
-                    
-                   
-                    <form action="{{ route('comments.destroy', $comment) }}" method="POST" class="mt-2">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn-danger" 
-                                onclick="return confirm('Vai tiešām vēlaties dzēst šo komentāru?')">
-                            <i class="fas fa-trash"></i> Dzēst
-                        </button>
-                    </form>
-                   
-                </div>
-            </div>
-        @empty
-            <div class="alert alert-warning">Nav komentāru</div>
-        @endforelse
-        
-        <div class="mt-4">
-            {{ $comments->links() }}
-        </div>
-    </div>
-    @else
-    <div class="alert alert-warning">Komentāri nav pieejami</div>
-    @endisset
-</div>
 
     <footer class="site-footer">
   <div class="footer-left">
